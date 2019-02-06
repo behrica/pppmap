@@ -1,4 +1,4 @@
-(defproject pppmap "0.1.0-SNAPSHOT"
+(defproject pppmap "0.1.0"
   :description "Partitioned parallel maps with progress"
   :url "http://example.com/FIXME"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
