@@ -1,9 +1,11 @@
-(ns pppmap.core)
+(ns pppmap.core
+  (:require [clojure.tools.logging :as log])
+  )
 
 
 
 (defn print-progress [label index size]
-  (println (Thread/currentThread) (java.util.Date.) "--" label " : " index " / " size))
+  (log/info "pppmap progress -- " label " : " index " / " size))
 
 (defn pmap-with-progress
   "Like map, except f is applied in parallel. Semi-lazy in that the
@@ -68,3 +70,7 @@
                    
                    ) col )))
 
+(comment
+  (print-progress "hello" 5 10)
+
+    )
