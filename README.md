@@ -1,6 +1,7 @@
 # prog-map
 
-A Clojure library designed to execute a map function with optional progress output and tunabel partion size. 
+A Clojure library designed to execute a map function with optional progress output and tunabel partitioon size. 
+The tuning of the partition size can even make small tasks to run efficient in parallel.
 
 ## Usage
 
