@@ -18,11 +18,9 @@
   ([label f coll]
    (let [n (+ 2 (.. Runtime getRuntime availableProcessors))
          size (count coll)
-         f-with-print (fn [index item] (let [res (f item)
-                                             _ (print-progress label index size)
-                                             ]
-                                         res
-                                  ) )
+         f-with-print (fn [index item] (let [_ (print-progress label index size)
+                                             res (f item)]
+                                         res))
          rets (map-indexed (fn [index item](future (f-with-print index item)  )) coll)
          step (fn step [[x & xs :as vs] fs]
                 (lazy-seq
