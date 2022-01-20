@@ -1,3 +1,5 @@
+[![Clojars Project](https://img.shields.io/clojars/v/pppmap.svg)](https://clojars.org/pppmap)
+
 # prog-map
 
 A Clojure library designed to execute a map function with optional progress output and tunabel partitioon size. 
