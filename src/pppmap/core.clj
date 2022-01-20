@@ -1,11 +1,17 @@
-(ns pppmap.core
-  (:require [clojure.tools.logging :as log])
-  )
+(ns pppmap.core)
+  
 
 
 
 (defn print-progress [label index size]
-  (log/info "pppmap progress -- " label " : " index " / " size))
+  (tap> {:ns *ns*
+         :topic :pppmap-progress
+         :label label
+         :index index
+         :size size}))
+
+        ;; "pppmap progress -- " label " : " index " / " size
+
 
 (defn pmap-with-progress
   "Like map, except f is applied in parallel. Semi-lazy in that the
@@ -63,12 +69,12 @@
   (let [size (- (count col) 1)]
     (map-indexed (fn [index item]
                    (do (print-progress print-label index size)
-                       (f item)
-                       )
+                       (f item)))
+                       
                    
-                   ) col )))
+                 col)))
 
 (comment
-  (print-progress "hello" 5 10)
+  (print-progress "hello" 5 10))
 
-    )
+    
