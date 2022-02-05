@@ -1,8 +1,8 @@
 [![Clojars Project](https://img.shields.io/clojars/v/pppmap.svg)](https://clojars.org/pppmap)
 
-# prog-map
+# pppmap
 
-A Clojure library designed to execute a map function with optional progress output and tunabel partitioon size. 
+A Clojure library designed to execute a (p)map function with optional progress output and tunable partition size. 
 The tuning of the partition size can even make small tasks to run efficient in parallel.
 
 ## Usage
@@ -11,7 +11,7 @@ FIXME
 
 ## License
 
-Copyright © 2019 FIXME
+Copyright © 2019 Carsten Behring
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
